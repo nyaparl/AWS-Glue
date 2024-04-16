@@ -1,0 +1,19 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.12
+    commands:
+      - echo "Nothing to install ....."
+
+  build:
+    commands:
+      - Nothing to build ...."
+
+  post_build:
+    commands:
+      - echo "uploading to s3..."
+      - aws s3 cp gluejob-01.py s3://cg-pr-learn-bucket-01/scripts/gluejob-01.py
+      - echo "Deployment complete !!!!!!!!"
+
+

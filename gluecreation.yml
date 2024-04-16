@@ -1,15 +1,5 @@
 Resources:
-  phases:
-    install:
-      command:
-        - echo "Nothing to install....."
-    build:
-      command:
-        - echo "nothing to build......."
-    post-build:
-      command:
-        - aws s3 cp gluejob-01.py  s3://aws-boot-cicd-bucket/gluejob-01.py
-
+ 
   GlueJob:
     Type: AWS::Glue::Job
     Properties:
