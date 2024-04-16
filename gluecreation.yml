@@ -1,5 +1,5 @@
 Resources:
- 
+
   GlueJob:
     Type: AWS::Glue::Job
     Properties:
