@@ -14,8 +14,8 @@ spark = glueContext.spark_session
 
 df = (spark.read.format('csv').option("escapeQuotes", "true") \
       .option("header","ture") \
-      .load("s3://cg-pr-glue-bucket/input/OfficeData.csv"))
-df.write.format("csv").mode("overwrite").save("s3://cg-pr-glue-bucket/output/")
+      .load("s3://cg-pr-learn-bucket-01/input/OfficeData.csv"))
+df.write.format("csv").mode("overwrite").save("s3://cg-pr-learn-bucket-01/output/out.csv")
 
 job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
