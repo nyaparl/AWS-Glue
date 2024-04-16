@@ -13,7 +13,7 @@ glueContext = GlueContext(sc)
 spark = glueContext.spark_session
 
 df = (spark.read.format('csv').option("escapeQuotes", "true") \
-      .option("header","ture") \
+      .option("header","true") \
       .load("s3://cg-pr-learn-bucket-01/input/OfficeData.csv"))
 df.write.format("csv").mode("overwrite").save("s3://cg-pr-learn-bucket-01/output/out.csv")
 
